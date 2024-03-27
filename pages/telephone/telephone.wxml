@@ -1,0 +1,39 @@
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="userbox">
+      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        </button>
+        <view class="nickname-wrapper">
+          <text class="nickname-label">昵称</text>
+          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
+        </view>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <van-button wx:if="{{canIUseGetUserProfile}}" bind:tap="getUserProfile" type="primary" block>微信一键授权登录</van-button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bind:tap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover" class="userimage"></image>
+        <text class="usercharater">{{userInfo.nickName}}</text>
+        <text style="position: relative; top: 60rpx;left: -120rpx; color: {{VIPcolor}};" data-color="{{VIPcolor}}" bind:tap="addVIP">VIP</text>
+        <text class="device">——————————————————————————————————————————————————————</text>
+        <view style="display: flex; align-items: center;">
+        <navigator url="../../packageA/pages/payment/payment" class="buy">
+            <image src="/images/待支付.png" style="width: 100%;height: 90%;"></image>
+          </navigator>
+          <navigator url="../../packageA/pages/history/history" class="finish">
+            <image src="/images/已完成.png" style="width: 100%; height: 100%;"></image>
+          </navigator>
+        </view>
+        <text style="position: relative; top: 70rpx;left: -175rpx;">待支付
+        </text>
+        <text style="position: relative; top: 23rpx; left: 178rpx;"> 已完成</text>
+        <van-cell is-link title="联系我们" link-type="navigateTo" url="/packageA/pages/connect/connect" style="position: relative;top: 30rpx; width: 125%; " />
+        <van-cell is-link title="年卡会员协议" link-type="navigateTo" url="/packageA/pages/year/year" style="position: relative;top: 30rpx; width: 125%; " />
+        <button style="background-color: white;border: gray solid 1rpx; position: relative;bottom: -200rpx;" bind:tap="onEixt"><text style="color: red;">退出登录</text></button>
+      </block>
+    </view>
+  </view>
+</scroll-view>

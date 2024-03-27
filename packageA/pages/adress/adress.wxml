@@ -1,0 +1,19 @@
+<van-nav-bar title="地址" left-text="返回" left-arrow right-text="添加地址" bind:click-left="back_list" bind:click-right="add_adress" safe-area-inset-top="{{false}}" style="position: absolute; top: 0rpx; width: 100%;" />
+<view wx:for="{{adress_list}}" wx:key="index" wx:if="{{adress_list.length>0}}">
+  <view class="box">
+    <view style="width: 100%;   margin-top: 5rpx;">
+      <view class="text-row">
+        <text>{{item.username}} {{item.usernumber}}</text>
+      </view>
+      <view class="text-row">
+        <text>地址 : {{item.useradress}}</text>
+      </view>
+      <view class="text-row"> <text wx:if="{{item.userStay!=null}}">备注 ：{{item.userStay}}</text></view>
+      <view class="text-row">
+        <van-checkbox value="{{item.isDefaultAdress}}" bind:change="onChange" data-index="{{index}}">设为默认地址</van-checkbox>
+        <van-button type="primary" size="mini" bind:tap="modify_adress" data-index="{{index}}" style="position: relative;top: 10rpx; left: 110rpx;">修改</van-button>
+        <van-button type="danger" size="mini" style="position: relative; right: 10rpx;bottom: -10rpx;" bind:tap="delete_adress" data-index="{{index}}">删除</van-button>
+      </view>
+    </view>
+  </view>
+</view>

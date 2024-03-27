@@ -1,0 +1,11 @@
+<van-cell-group>
+  <van-field value="{{adress_form.username}}" required clearable label="用户名" placeholder="请输入用户名" bind:change="onChange" data-index="{{0}}" />
+  <van-field value="{{adress_form.usernumber}}" maxlength="{{11}}" type="digit" required clearable label="联系电话" placeholder="请输入电话号码" bind:change="onChange" data-index="{{1}}" />
+  <van-field value="{{adress_form.useradress}}" type="textarea" required clearable label="详细地址" placeholder="请输入详细地址" required bind:change="onChange" data-index="{{2}}" />
+  <van-field value="{{adress_form.userStay}}" label="备注" type="textarea" placeholder="请输入备注" autosize border="{{ false }}" bind:change="onChange" data-index="{{3}}" />
+</van-cell-group>
+<view class="backClass">
+  <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" bind:tap="back" >
+    修改并返回
+  </van-button>
+</view>

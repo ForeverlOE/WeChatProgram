@@ -1,0 +1,17 @@
+<view>
+<view style="position: relative;top: 10rpx;padding-bottom: 10rpx;border-bottom:gray solid 0.1rpx;">
+  <view >
+    <text style="font-size:45rpx;">一人一小时整理包</text>
+  </view>
+  <view style="display: flex;flex-direction: row;">
+    <image src="https://wx2.sinaimg.cn/orj360/008De5utly1hno8ix3b62j31vl2i67wi.jpg" style="width: 300rpx;height: 250rpx;border-radius: 25rpx; flex: 3;"></image>
+    <view  style="position: relative;flex: 4; margin-left: 20rpx;">
+    <text style="margin-left: 25rpx;">提供40元的一人一小时整理服务，负责对指定地点进行基础整理，包括清扫垃圾等工作。</text>
+  </view>
+  </view >
+  <view style="display:flex;flex-direction:row">
+  <view style="font-size: x-small;color: gray;flex: 1;"><text>2024.3.21</text></view>
+  <text style="position: relative;right: -230rpx; color: gray; flex: 1;font-size: x-small;">购买数量:1</text>
+</view>
+</view>
+</view>

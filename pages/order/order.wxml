@@ -1,0 +1,13 @@
+<navigator wx:for="{{serviceList}}" wx:key="name" url="../../packageA/pages/service1/service1?name={{item.name}}&src={{item.src}}&price={{item.price}}&buy={{item.buy}}&information={{item.introduceText}}&littleIntrocue={{item.littleIntroduce}}">
+  <view class="service">
+    <image src="{{item.src}}" style="flex:2;max-width: 30%;border-radius: 15rpx;"></image>
+    <view class="textBox" style="flex: 4;">
+      <view style="font-size: 36rpx; color: brown;">
+        <text style="position: relative;top: -25rpx;">{{item.name}}</text>
+      </view>
+      <view style="font-size: 25rpx;  color: rgb(78, 76, 76);position: relative;">
+        <text style="position: relative; margin-left: 60rpx;">{{item.introduceText}}</text>
+      </view>
+    </view>
+  </view>
+</navigator>

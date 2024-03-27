@@ -1,0 +1,127 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userimage {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 40rpx;
+  top: 10rpx;
+  width: 153rpx;
+  height: 148rpx;
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 2rpx;
+  top: 2rpx;
+}
+
+.usercharater {
+  position: relative;
+  top: 60rpx;
+  left: -115rpx;
+  color: black;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+van-button {
+  position: relative;
+  left: 0rpx;
+  top: 509rpx;
+  width: 350rpx;
+  height: 104rpx;
+  display: block;
+  box-sizing: border-box;
+}
+
+.userimage {
+  position: absolute;
+}
+
+.user_box_block {
+  display: block;
+  border: black solid 1rpx;
+  width: 100%;
+}
+
+.device {
+  position: relative;
+  top: 74rpx;
+  font-size: 30rpx;
+  color: pink;
+}
+
+.buy {
+  width: 155rpx;
+  height: 150rpx;
+  position: relative;
+  top: 70rpx;
+  left: -90rpx;
+  background: white;
+  border: white solid 10rpx;
+}
+
+.finish {
+  width: 165rpx;
+  height: 140rpx;
+  background-color: white;
+  position: relative;
+  top: 70rpx;
+  left: 90rpx;
+  border: white solid 4rpx;
+}

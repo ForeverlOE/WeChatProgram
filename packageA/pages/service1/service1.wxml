@@ -1,0 +1,15 @@
+<view>
+  <image src="{{query.src}}" class="pic"></image>
+  <view>
+    <text style="font-size: x-large; color: red;">￥{{query.price}}</text>
+  </view>
+  <view>
+    <text style="margin-left: 80rpx; font-size: 51rpx">{{query.information}}</text>
+  </view>
+  <van-goods-action class="box">
+    <van-goods-action-icon icon="chat-o" text="客服" bind:tap="message_Waiter" />
+    <van-goods-action-icon icon="cart-o" text="购物车" wx:if="{{GoodList.length > 0}}" info="{{GoodList.length}}" bind:tap="buyCar" />
+    <van-goods-action-button color="linear-gradient(to right, {{color.firts}},{{color.second}})" text="加入购物车" type="warning" bind:tap="buy" />
+    <van-goods-action-button color="linear-gradient(to right, {{color.firts}},{{color.second}})" text="立即预约" bind:tap="yuyue" />
+  </van-goods-action>
+</view>

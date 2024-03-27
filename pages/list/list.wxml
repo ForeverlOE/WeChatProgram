@@ -1,0 +1,71 @@
+<view>
+  <view class="adress_box">
+    <view wx:if="{{adressList.length===0}}">
+      <button bind:tap="add_adress" class="add_adress">
+        <image src="../../images/加号.png" class="adressImage"></image>
+        <text id="add_adress_text">添加服务地址</text>
+      </button>
+    </view>
+    <view wx:if="{{adressList.length>0}}" class="adressList">
+      <view class="sec_adress_box">
+        <view>
+          <text>{{adressList[drawIndex].username}} {{adressList[drawIndex].usernumber}}</text>
+        </view>
+        <view>
+          <text>地址 : {{adressList[drawIndex].useradress}}</text>
+        </view>
+        <view style="position: relative;bottom: -20rpx; right: -10rpx;">
+          <van-button round type="primary" size="mini" bind:tap="add_adress" class="modify" color="linear-gradient(to right, #4bb0ff, #6149f6)">修改</van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="Total">
+    <view class="Goods">
+      <view wx:for="{{goodList}}" wx:key="index" class="goodList">
+        <view class="goodName">
+          <text>{{item.name}}</text>
+        </view>
+        <view style="position: relative; display: flex;flex-direction: row;">
+          <image src="{{item.src}}" style="height: 150rpx;width: 150rpx;position: relative;left: -4rpx;border-radius: 10rpx; flex:2 ;"></image>
+          <view style="flex: 3;margin-left: 10rpx;">
+            <text style="font-size: 34rpx; margin-left: 30rpx;">{{item.littleIntroduce}}</text>
+          </view>
+          <view>
+            <text style="font-size: 28rpx;color: rgba(255, 0, 0, 0.562);position:relative;left: -5rpx; flex: 1;top: 100rpx;">单价: {{item.price}}</text>
+          </view>
+        </view>
+        <view class="buttonContainers">
+          <view>
+            <van-checkbox value="{{item.buy}}" bind:change="onChange1" data-index="{{index}}"></van-checkbox>
+          </view>
+          <view class="button-containerReduce">
+            <button size="mini" bind:tap="goodNumControl_reduce" data-index="{{index}}" style="background: linear-gradient(90deg, rgb(255, 0, 34), rgb(255, 73, 0));box-shadow: rgba(255, 119, 0, 0.2) 0px 9px 13px 0px;vertical-align: top;"><text>－</text></button>
+          </view>
+          <view style="position: relative;left: 140rpx;top: -10rpx;">
+            <text>{{item.buyNum}}</text>
+          </view>
+          <view class="button-containerAdd">
+            <button size="mini" bind:tap="goodNumControl_add" data-index="{{index}}" style="background: linear-gradient(90deg, rgb(255, 0, 34), rgb(255, 73, 0));box-shadow: rgba(255, 119, 0, 0.2) 0px 9px 13px 0px;vertical-align: top;"><text>+</text></button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="floor_box">
+      <view class="box">
+        <view style="position: relative;left: 10rpx;top: -20rpx;" wx:if="{{goodList.length>0}}">
+          <van-checkbox value="{{allChoose&&secondAllChoose}}" bind:change="onChange">全选</van-checkbox>
+        </view>
+        <view style="position: relative;left: 200rpx; font-size: 60rpx; color: rgb(100, 97, 97);transform: translateY(-10%);">
+          <text wx:if="{{total_price>0}}">￥</text>
+        </view>
+        <view style="position: relative;font-size: large;color:rgb(219, 74, 74);left:200rpx; align-items: center;">
+          <text wx:if="{{total_price>0}}">{{total_price}}</text>
+        </view>
+        <view style="position: absolute;align-items: center;right: 10rpx;">
+          <van-button round type="info" bind:tap="buy">一键购买</van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

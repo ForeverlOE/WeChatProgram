@@ -1,0 +1,37 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  border-bottom: black solid 1rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  top: 110rpx;
+  margin-bottom: 5rpx;
+}
+
+.box text {
+  margin-bottom: 5px;
+}
+
+.box van-checkbox {
+  display: flex;
+  font-size: 35rpx;
+}
+
+.modify {
+  position: absolute;
+  bottom: -54rpx;
+  right: 8rpx;
+}
+
+.text-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.text-box {
+  flex: 1;
+}

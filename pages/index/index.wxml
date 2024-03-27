@@ -1,0 +1,33 @@
+<view>
+  <view class="swiper_control">
+    <swiper autoplay="True" interval="2000" indicator-dots="True" indicator-color="white" indicator-active-color="lightgray" circular="True">
+      <swiper-item>
+        <image src="https://wx4.sinaimg.cn/orj360/008De5utly1hno8iwy0s8j32j81weu0x.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://wx4.sinaimg.cn/orj360/008De5utly1hno8ix0vysj32jc1ws1ky.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://wx2.sinaimg.cn/orj360/008De5utly1hno8ix3b62j31vl2i67wi.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://wx4.sinaimg.cn/orj360/008De5utly1hno8iwyl9aj32jl1wmx6p.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://wx1.sinaimg.cn/orj360/008De5utly1hno8iwvebwj32jj1wpnpd.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://wx4.sinaimg.cn/orj360/008De5utly1hno8ix3094j31vk2i64qq.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view style="position:relative;top:510rpx">
+    <text style="margin-left: 75rpx; font-family:楷体">我司是一个专注于收纳整理、家具翻新和收纳改造的项目团队，我们已经服务了超过5000名客户。通过直播售卖，我们成功推广了不同垂类的产品，并吸引了超过1000万次视频播放。我们的视频总数已经达到2亿次以上，备受媒体关注，成为行业内的TOP1，目前实时排名重庆同类型行业排名第三，全国同类型行业排名前十。我司团队共有150多名培训收纳师，为客户提供更优质的服务。</text>
+    <view>
+    <text style="margin-left: 75rpx; font-family:楷体"> 我司主营业务——收纳整理、家具翻新和收纳改造，在为客户提供更好的服务的同时拉动了相关产业的增长。现已经带来了超过3000万的增量。我们始终致力于为客户创造舒适、整洁的生活空间，以及独特的家具设计和改造方案。</text>
+  </view>
+  <view>
+    <text style="margin-left: 75rpx; font-family:楷体">我司的服务覆盖范围以重庆为中心、扩散于成都、长沙、济南和郑州等城市。我们致力于为这些城市的居民提供高品质的家居装修解决方案。无论您需要空间扩容、家具翻新还是个性化设计，我们都将竭诚为您提供专业的技术支持，让您的家居生活更加舒适、便捷、环保。</text>
+  </view>
+  </view>
+</view>

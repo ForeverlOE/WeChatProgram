@@ -1,0 +1,10 @@
+.backClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+van-cell-group {
+  margin-top: 10rpx;
+}
